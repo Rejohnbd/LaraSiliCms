@@ -42,7 +42,7 @@
                                 @csrf
                                 @method('DELETE') 
                                 <button type="submit" class="btn btn-danger btn-sm">
-                                    <!-- trashed_method Represent it is has been trash -->
+                                    
                                     {{ $post->trashed() ? 'Delete' : 'Trash' }}
                                 </button>
                             </form>
