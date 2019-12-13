@@ -16,7 +16,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-
+        // dd(Category::first()->posts());   //We can use here
         return view('categories.index')->with('categories', Category::all());
     }
 
