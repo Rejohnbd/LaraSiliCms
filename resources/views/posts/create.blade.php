@@ -18,11 +18,12 @@
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" cols="5" row="5" class="form-control"></textarea>
+                    <input id="content" type="hidden" name="content">
+                    <trix-editor input="content"></trix-editor>
                 </div>
                 <div class="form-group">
-                    <label for="publish_at">Publish_at</label>
-                    <input type="text" class="form-control" name="publish_at" id="publish_at">
+                    <label for="published_at">Publish_at</label>
+                    <input type="text" class="form-control" name="published_at" id="published_at">
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
@@ -34,4 +35,18 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css"></link>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+@endsection
+@section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr('#published_at',{
+        enableTime: true
+    });
+</script>
 @endsection
