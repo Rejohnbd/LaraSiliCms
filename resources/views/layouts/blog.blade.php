@@ -17,7 +17,7 @@
       <div class="container">
         <div class="navbar-left">
           <button class="navbar-toggler" type="button">&#9776;</button>
-          <a class="navbar-brand" href="/">
+          <a class="navbar-brand" href="{{ url('/') }}">
             <img class="logo-dark" src="{{ asset('img/logo-dark.png') }}" alt="logo">
             <img class="logo-light" src="{{ asset('img/logo-light.png') }}" alt="logo">
           </a>
@@ -41,7 +41,7 @@
       <div class="container">
         <div class="row gap-y align-items-center">
           <div class="col-6 col-lg-3">
-            <a href="/"><img src="{{ asset('img/logo-dark.png') }}" alt="logo"></a>
+            <a href="{{ url('/') }}"><img src="{{ asset('img/logo-dark.png') }}" alt="logo"></a>
           </div>
           <div class="col-6 col-lg-3 text-right order-lg-last">
             <div class="social">
