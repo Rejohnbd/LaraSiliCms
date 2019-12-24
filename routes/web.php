@@ -11,7 +11,10 @@
 |
 */
 
+use App\Http\Controllers\Blog\PostsController;
+
 Route::get('/', 'WelcomeController@index');
+Route::get('/posts/{post}', [PostsController::class, 'show']);
 
 Auth::routes();
 Route::middleware(['auth'])->group(function(){    
